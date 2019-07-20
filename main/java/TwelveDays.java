@@ -20,9 +20,9 @@ class TwelveDays {
     }
 
     String verses(int startVerse, int endVerse) {
-        String lyrics = "";
-        for (int i = startVerse; i <= endVerse; i++) {
-            lyrics += verse(i) + (i != endVerse ? "\n" : "");
+        String lyrics = verse(startVerse);
+        for (int i = startVerse + 1; i <= endVerse; i++) {
+            lyrics += "\n" + verse(i);
         }
         return lyrics;
     }
